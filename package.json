@@ -1,0 +1,33 @@
+{
+  "name": "bridge",
+  "version": "1.0.0",
+  "description": "Bridge from ETH to cheapETH",
+  "main": "index.js",
+  "repository": "git@github.com:cheapETH/bridge.git",
+  "author": "George Hotz <geohot@gmail.com>",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deployDevEthBridge": "cross-env NETWORK=deveth npx hardhat run scripts/bridge.js --network cheapeth",
+    "validateWrap": "cross-env TXID=0x3ccaef6997d9d05035d50d51fc2158337c3af12f63ba73ed38b84cc7b8baa051 BRIDGESALE=0x781B1E3d3081E37405eF706790AB95AccBe28644 BRIDGE=0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534 hardhat run scripts/wrappeddth.js --network cheapeth",
+    "deployDTHWrap": "cross-env BRIDGE=0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534 hardhat run scripts/wrappeddth.js --network cheapeth",
+    "deploySale": "cross-env BRIDGE='0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534' hardhat run scripts/bridgesale.js --network cheapeth",
+    "validateSale": "cross-env TXID=0x7b75a5cbecadc6e2f4f4055c489604a9e812810c69af867b0fcc21ba8dc6f612 BRIDGESALE=0x4fC645056F5b9a43200A739e44532D2a73663DB3 BRIDGE='0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534' hardhat run scripts/bridgesale.js --network cheapeth"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "abi-decoder": "^2.4.0",
+    "chai": "^4.3.0",
+    "ethereum-waffle": "^3.2.2",
+    "ethers": "^5.0.31",
+    "hardhat": "^2.0.11",
+    "hardhat-gas-reporter": "^1.0.4",
+    "merkle-patricia-tree": "^4.1.0",
+    "web3": "^1.3.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
