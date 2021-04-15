@@ -12,7 +12,12 @@
     "validateWrap": "cross-env TXID=0x3ccaef6997d9d05035d50d51fc2158337c3af12f63ba73ed38b84cc7b8baa051 BRIDGESALE=0x781B1E3d3081E37405eF706790AB95AccBe28644 BRIDGE=0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534 hardhat run scripts/wrappeddth.js --network cheapeth",
     "deployDTHWrap": "cross-env BRIDGE=0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534 hardhat run scripts/wrappeddth.js --network cheapeth",
     "deploySale": "cross-env BRIDGE='0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534' hardhat run scripts/bridgesale.js --network cheapeth",
-    "validateSale": "cross-env TXID=0x7b75a5cbecadc6e2f4f4055c489604a9e812810c69af867b0fcc21ba8dc6f612 BRIDGESALE=0x4fC645056F5b9a43200A739e44532D2a73663DB3 BRIDGE='0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534' hardhat run scripts/bridgesale.js --network cheapeth"
+    "validateSale": "cross-env TXID=0x7b75a5cbecadc6e2f4f4055c489604a9e812810c69af867b0fcc21ba8dc6f612 BRIDGESALE=0x4fC645056F5b9a43200A739e44532D2a73663DB3 BRIDGE='0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534' hardhat run scripts/bridgesale.js --network cheapeth",
+    "startBridge": "cross-env NETWORK=deveth BRIDGE=0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534 hardhat run scripts/bridge.js --network cheapeth",
+    "claim-wdTH": "cross-env NETWORK=deveth BRIDGE=0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534 hardhat run scripts/wrappeddth.js --network cheapeth",
+    "start-dth-bridge": "cross-env NETWORK=deveth BRIDGE=0x3CcC5f31fE08abED579F7D0a3BffacDEe95f9534 hardhat run scripts/bridge.js --network cheapeth",
+    "start-bsc-bridge": "cross-env NETWORK=binance BRIDGE=0x5d9F3F1441b0f4f127D5e8D7d39f68638E26d8b8 hardhat run scripts/bridge.js --network cheapeth",
+    "start-eth-bridge": "cross-env NETWORK=mainnet BRIDGE=0x42ba482C89662d667cF9664802cE34DABbFB1375 hardhat run scripts/bridge.js --network cheapeth"
   },
   "license": "MIT",
   "dependencies": {
