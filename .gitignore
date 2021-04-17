@@ -1,0 +1,7 @@
+.vscode
+.*.swp
+.*.swo
+__pycache__
+node_modules
+artifacts
+cache
